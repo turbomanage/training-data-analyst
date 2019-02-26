@@ -39,7 +39,7 @@ INPUT_COLUMNS = [
     tf.feature_column.numeric_column('pickuplon'),
     tf.feature_column.numeric_column('dropofflat'),
     tf.feature_column.numeric_column('dropofflon'),
-    tf.feature_column.numeric_column('passengers'),
+    tf.feature_column.numeric_column('passengers',dtype=tf.int32),
     
     # Engineered features that are created in the input_fn
     tf.feature_column.numeric_column('latdiff'),
@@ -179,7 +179,7 @@ def train_and_evaluate(args):
             filename = args['eval_data_paths'],
             mode = tf.estimator.ModeKeys.EVAL,
             batch_size = args['eval_batch_size']),
-        steps = 100,
+        steps = None,
         exporters = exporter)
     tf.estimator.train_and_evaluate(estimator, train_spec, eval_spec)
 

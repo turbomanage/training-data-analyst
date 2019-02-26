@@ -36,13 +36,13 @@ if __name__ == '__main__':
         '--train_batch_size',
         help = 'Batch size for training steps',
         type = int,
-        default = 512
+        default = 128
     )
     parser.add_argument(
         '--eval_batch_size',
         help = 'Batch size for evaluation steps',
         type = int,
-        default = 512
+        default = 128
     )
     parser.add_argument(
         '--train_steps',
@@ -53,7 +53,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--eval_steps',
         help = 'Number of steps to run evalution for at each checkpoint',
-        default = 10,
+        default = None,
         type = int
     )
     parser.add_argument(
@@ -88,13 +88,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--eval_delay_secs',
         help = 'How long to wait before running first evaluation',
-        default = 10,
-        type = int
-    )
-    parser.add_argument(
-        '--min_eval_frequency',
-        help = 'Minimum number of training steps between evaluations',
-        default = 1,
+        default = 60,
         type = int
     )
     parser.add_argument(
