@@ -178,7 +178,8 @@ def train_and_evaluate(args):
         input_fn = read_dataset(
             filename = args['eval_data_paths'],
             mode = tf.estimator.ModeKeys.EVAL,
-            batch_size = args['eval_batch_size']),
+            batch_size = args['eval_batch_size'],
+            throttle_secs = args['eval_throttle-secs']),
         steps = None,
         exporters = exporter)
     tf.estimator.train_and_evaluate(estimator, train_spec, eval_spec)

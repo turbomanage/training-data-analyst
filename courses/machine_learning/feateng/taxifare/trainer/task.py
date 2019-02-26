@@ -91,6 +91,13 @@ if __name__ == '__main__':
         default = 60,
         type = int
     )
+    # Eval arguments
+    parser.add_argument(
+        '--eval_throttle_secs',
+        help = 'How often to evaluate',
+        default = 60,
+        type = int
+    )
     parser.add_argument(
         '--format',
         help = 'Is the input data format csv or tfrecord?',
