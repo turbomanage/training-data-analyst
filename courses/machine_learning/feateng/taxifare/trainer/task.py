@@ -95,7 +95,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--eval_throttle_secs',
         help = 'How often to evaluate',
-        default = 60,
+        default = 300,
         type = int
     )
     parser.add_argument(
