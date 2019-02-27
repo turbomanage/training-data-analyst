@@ -151,7 +151,7 @@ def read_dataset(filename, mode, batch_size = 512):
         file_list = tf.gfile.Glob(filename)
 
         # Create dataset from file list
-        dataset = tf.data.TextLineDataset(file_list).map(decode_csv)
+        dataset = tf.data.TextLineDataset(file_list).skip(1).map(decode_csv)
 
         if mode == tf.estimator.ModeKeys.TRAIN:
             num_epochs = None # indefinitely
