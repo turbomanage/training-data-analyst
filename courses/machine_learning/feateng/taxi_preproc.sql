@@ -13,7 +13,7 @@ SELECT
   pickup_latitude AS pickuplat,
   dropoff_longitude AS dropofflon,
   dropoff_latitude AS dropofflat,
-  passenger_count*1.0 AS passengers,
+  CONCAT(CAST(passenger_count AS STRING), ".0") AS passengers,
   "key" as key
 FROM
   `nyc-tlc.yellow.trips` 

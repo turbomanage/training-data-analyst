@@ -39,7 +39,7 @@ INPUT_COLUMNS = [
     tf.feature_column.numeric_column('pickuplon'),
     tf.feature_column.numeric_column('dropofflat'),
     tf.feature_column.numeric_column('dropofflon'),
-    tf.feature_column.numeric_column('passengers',dtype=tf.int32),
+    tf.feature_column.numeric_column('passengers'),
     
     # Engineered features that are created in the input_fn
     tf.feature_column.numeric_column('latdiff'),
