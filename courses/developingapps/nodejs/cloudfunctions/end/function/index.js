@@ -11,6 +11,7 @@ exports.subscribe = function subscribe(event) {
   // The Cloud Pub/Sub Message object.
   const pubsubMessage = event.data;
 
+  console.log('pubsubMessage:' + JSON.stringify(pubsubMessage));
   let feedbackObject = JSON.parse(Buffer.from(pubsubMessage.data, 'base64').toString()).data;
   console.log('Feedback object data before Language API:' + JSON.stringify(feedbackObject));
   
