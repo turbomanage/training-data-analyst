@@ -12,7 +12,7 @@ Updated labs to use AI Notebooks instead of Datalab.
 
 ### Open the notebook and install missing libraries
 1. Once the instance is up, click OPEN JUPYTERLAB.
-1. Click the Terminal launcher and type `pip install jupyterlab-tensorboard`. You'll need this later.
+1. Click the Terminal launcher and type `pip install jupyter-tensorboard`. You'll need this later.
 1. Close the JupyterLab tab.
 1. Back in the GCP Console tab showing your notebook instance, restart the instance using the RESET button.
 
