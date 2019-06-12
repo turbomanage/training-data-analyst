@@ -1,6 +1,6 @@
 # AI Notebooks 
 
-Updated labs to use AI Notebooks instead of Datalab.
+Updated labs to use AI Notebooks based on [JupyterLab](https://github.com/jupyterlab/jupyterlab) instead of Datalab.
 ## Getting started with AI Notebooks
 ### Create a notebook to run the machine learning Qwiklabs
 1. In GCP Console, select AI Platform > Notebooks.
