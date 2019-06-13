@@ -31,6 +31,15 @@ Updated labs to use AI Notebooks based on [JupyterLab](https://github.com/jupyte
 1. Navigate to training_data_analyst/courses/machine_learning/datasets.
 1. Click create_datasets.ipynb to open the notebook for Lab 1.
 
+### Lab index
+1. [datasets/create_datasets.ipynb](datasets/create_datasets.ipynb)
+1. [tensorflow/a_tfstart.ipynb](tensorflow/a_tfstart.ipynb)
+1. [tensorflow/b_estimator.ipynb](tensorflow/b_estimator.ipynb)
+1. [tensorflow/c_batched.ipynb](tensorflow/c_batched.ipynb)
+1. [tensorflow/d_traineval.ipynb](tensorflow/d_traineval.ipynb)
+1. [cloudmle/cloudmle.ipynb](cloudmle/cloudmle.ipynb)
+1. [feateng/feateng.ipynb](feateng/feateng.ipynb)
+
 ## Working with JupyterLab
 * The round circle in the upper right is hollow when the notebook is idle and filled when the kernel is working.
 * The \[\] to the left of each code block indicate status: a number represents the sequence in which it was run, an asterisk shows it's running, and it's otherwise empty.
