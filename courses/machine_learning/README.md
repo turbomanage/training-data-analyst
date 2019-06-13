@@ -60,7 +60,7 @@ Try the Tensorboard launcher as above.
 If the launcher doesn't work, you can still connect to it using Cloud Shell Web Preview:
 
 * Note the port on which TensorBoard is running.
-* In the Cloud Shell, run [start_tunnel.sh](../../../util/start_tunnel.sh) to connect to your AI Notebook instance using its internal IP address and the port above.
+* In the Cloud Shell, run [start_tunnel.sh](../../../extra/util/start_tunnel.sh) to connect to your AI Notebook instance using its internal IP address and the port above.
 * Open Web Preview on port 8080.
 
 ### How to launch TensorBoard from the Cloud Shell
