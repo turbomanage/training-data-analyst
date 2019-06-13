@@ -1,5 +1,5 @@
 #!/bin/bash
-# Usage: start_tb INSTANCE_NAME INTERNAL_IP PORT
+# Usage: start_tunnel.sh INSTANCE_NAME INTERNAL_IP PORT
 INSTANCE_NAME=$1
 INSTANCE_IP=$2
 PORT=$3
