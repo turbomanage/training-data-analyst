@@ -31,5 +31,42 @@ Updated labs to use AI Notebooks based on [JupyterLab](https://github.com/jupyte
 1. Navigate to training_data_analyst/courses/machine_learning/datasets.
 1. Click create_datasets.ipynb to open the notebook for Lab 1.
 
-## Additional notes
-"Dr. Fibonacci" has shared additional notes about the taxifare labs at [drfib.me/taxilab](https://drfib.me/taxilab).
+## Working with JupyterLab
+* The round circle in the upper right is hollow when the notebook is idle and filled when the kernel is working.
+* The \[\] to the left of each code block indicate status: a number represents the sequence in which it was run, an asterisk shows it's running, and it's otherwise empty.
+
+## How to launch Tensorboard from Jupyterlab
+Before you can launch Tensorboard directory from JupyterLab, you must install a helper package.
+
+### Install jupyter-tensorboard
+After creating an AI Notebook instance, click OPEN JUPYTERLAB, then click Terminal in the launcher tab and run the following command:
+```
+> pip install jupyter-tensorboard
+```
+Restart the instance using the RESET button on the AI Platform Notebooks page.
+
+### Launch Tensorboard in a notebook
+
+Many notebooks contain TensorBoard.start(). Run the cell, then go to the Launcher tab (File > New Launcher) and click the Tensorboard launcher. Your Tensorboard will now show up in the Tensorboards tab in the left nav bar also.
+
+### Launch Tensorboard from the command line
+Alternatively, you can launch Tensorboard from the notebook Terminal. In the JupyterLab folder containing your notebook, click Git > Open Terminal to get a prompt in that directory, then run
+```
+> tensorboard --logdir=output_dir
+```
+where _output_dir_ is the model directory in your TF code.
+Try the Tensorboard launcher as above.
+
+If the launcher doesn't work, you can still connect to it using Cloud Shell Web Preview:
+
+* Note the port on which TensorBoard is running.
+* In the Cloud Shell, run [start_tunnel.sh](../../../util/start_tunnel.sh) to connect to your AI Notebook instance using its internal IP address and the port above.
+* Open Web Preview on port 8080.
+
+### How to launch TensorBoard from the Cloud Shell
+Sometimes it's useful to run TensorBoard on the Cloud Shell to see the progress of AI Platform jobs. To do this, go to the job detail and note the output directory, which will be a Cloud Storage path. Then in the Cloud Shell:
+```
+> tensorboard --port=8080 --logdir=gs://...[path from ML job --output-dir]
+```
+
+Now you can connect using Web Preview.
