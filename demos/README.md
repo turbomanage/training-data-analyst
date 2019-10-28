@@ -15,3 +15,4 @@ Demos for Google Cloud Platform courses (http://cloud.google.com/training).
 ## BigQuery
 1. [BigQuery clustering](bq/clustering.md)
 1. [BigQuery nesting](bq/nesting.md)
+1. [BigQuery vs. Dataflow](bq/JPTNH.md)
