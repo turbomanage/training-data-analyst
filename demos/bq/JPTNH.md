@@ -11,7 +11,7 @@ courtesy of [Stephan Meyn](https://github.com/smeyn), achieves the exact same re
 * Dataflow Java: 10 min
 * BigQuery: 10 sec
 
-```
+```sql
 #StandardSQL
 
 # JavaProjectsThatNeedHelp.sql
