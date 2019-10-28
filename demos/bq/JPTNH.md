@@ -5,15 +5,18 @@ which uses Dataflow to parse github Java commits from BQ and compute a composite
 
 Because the data is coming from BigQuery in the first place,
 the same results can be obtained much more quickly in BQ because the data never has to leave BQ. The following SQL code,
-courtesy of a couple Google engineers, achieves the exact same results, but much faster. In addition, the getPackages() method
-uses some very clever SQL with UNNEST to emit one row for each level of the package name.
+courtesy of Stephan Meyn(https://github.com/smeyn), achieves the exact same results, but much faster. In addition, the getPackages() method courtesy of Alex Lamana uses some very clever SQL with UNNEST to emit one row for each level of the package name.
 
-Dataflow python: 13 min
-Dataflow Java: 10 min
-BigQuery: ~10 sec
+* Dataflow python: 13 min
+* Dataflow Java: 10 min
+* BigQuery: 10 sec
 
 ```
 #StandardSQL
+
+# JavaProjectsThatNeedHelp.sql
+# Authors: Stephan Meyn, Alex Lamana
+
 # take a package and break it into subpackages
 # e.g.
 # com.google.package.subpackage is turned into an array of:
