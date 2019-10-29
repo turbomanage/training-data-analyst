@@ -44,4 +44,4 @@ Note the use of the ST_GEOGFROMTEXT function in the query and the *geog* column 
 
 Now let's make the map data-driven. On the left side, click on *Style* (near the bottom) and expand the section for *Fill opacity*. Click the *Data-driven* toggle to turn it on. Select the _Linear_ interpolation function and choose _pop_pct_chg_ as the field. For the *Domain* fields, enter 100 as the minimum and enter maximum based on the value shown from your data. In the *Range* fields, enter 0 and 1, respectively. These parameters will cause the map to show transparent fill for areas with the minimum growth (1x) and the darkest fill for areas with the fastest percent change between 2000 and 2010. Your final map will look something like this (for the Colorado Front Range):
 
-![Map of fastest growing ZIP code areas near Denver](DenverZIPs.md)
+![Map of fastest growing ZIP code areas near Denver](DenverZIPs.png)
