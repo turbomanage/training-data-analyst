@@ -4,7 +4,7 @@ Many of the [BigQuery public datasets](https://cloud.google.com/bigquery/public-
 
 First, run the following in BigQuery. The query joins two tables in the census dataset to obtain the fastest-growing ZIP codes between the 2000 and 2010 census and the geographical boundaries of each ZIP code area. Feel free to modify the WHERE clause for your state. Don't worry about cost: the query ingests 160MB, which costs less than 1/10 of a cent.
 
-```
+```sql
 #standardSQL
 SELECT
   zipcode,

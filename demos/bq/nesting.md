@@ -5,7 +5,7 @@ allow you to achieve the performance benefits of denormalization while retaining
 
 To illustrate, consider [this query](https://console.cloud.google.com/bigquery?sq=316488749670:7c97c53951da457c9aaa07388f4213be) against the Bitcoin public dataset. The query joins the blocks and transactions tables to find the max transaction ID for each block.
 
-```
+```sql
 #standardSQL
 SELECT block_id, max(i.input_sequence_number) 
 FROM `bigquery-public-data.bitcoin_blockchain.blocks` AS b
@@ -17,7 +17,7 @@ Run the query. Under Execution details, note the slot time consumed and bytes sh
 
 Now let's run the same query using nested and repeated fields. It turns out that the bitcoin_blockchain table already includes the transactions for each block as a nested and repeated column. [This query](https://console.cloud.google.com/bigquery?sq=316488749670:7ee7c9e79a1f473db78fb1665d6b8260) gives exactly the same results, but involves only one table:
 
-```
+```sql
 #standardSQL
 SELECT block_id, max(i.input_sequence_number) 
 FROM `bigquery-public-data.bitcoin_blockchain.blocks` AS b, b.transactions AS t, t.inputs as i

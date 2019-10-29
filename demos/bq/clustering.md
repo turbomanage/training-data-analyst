@@ -5,7 +5,7 @@ can dramatically reduce the time and cost of queries on large datasets.
 
 The [Wikipedia pageviews](https://console.cloud.google.com/bigquery?sq=316488749670:97c8ffb43aad44a98a5ff80e1375c62b) query runs over a dataset which is partitioned but not clustered:
 
-```
+```sql
 #https://medium.com/google-cloud/bigquery-optimized-cluster-your-tables-65e2f684594b
 SELECT title, sum(views) AS sumViews
 #Change to v3 for clustered table
