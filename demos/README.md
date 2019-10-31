@@ -17,3 +17,4 @@ Demos for Google Cloud Platform courses (http://cloud.google.com/training).
 1. [BigQuery nesting](bq/nesting.md)
 1. [BigQuery vs. Dataflow](bq/JPTNH.md)
 1. [BigQuery GeoViz](bq/GeoViz.md)
+1. [BQML taxifare](bq/taxifare.md)
