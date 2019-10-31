@@ -12,7 +12,7 @@ First, create a new dataset named "taxi". Then run the following query to sample
 create or replace table `taxi.taxi300k` as
 WITH taxi_preproc AS (
 SELECT 
-  MOD(ABS(FARM_FINGERPRINT(STRING(pickup_datetime))), 1000) AS dataset,
+  MOD(ABS(FARM_FINGERPRINT(STRING(pickup_datetime))), 10000) AS dataset,
   (tolls_amount + fare_amount) AS fare_amount,
   pickup_datetime,
   EXTRACT(DAYOFWEEK FROM pickup_datetime) AS dayofweek,
